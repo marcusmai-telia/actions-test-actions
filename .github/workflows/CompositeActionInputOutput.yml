@@ -20,5 +20,6 @@ jobs:
           input_var: MyInputValue
 
       - name: Print out the output value from Composite Action
-        run: echo "The output is = ${{ steps.myCompositeAction.outputs.output_var }}"
+        ## run: echo "The output is = ${{ steps.myCompositeAction.outputs.output_var }}"
+        run: echo "The output is = ${{ steps.myCompositeAction.outputs.value }}"
         shell: bash
