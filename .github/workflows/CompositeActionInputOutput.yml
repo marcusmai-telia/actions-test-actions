@@ -7,7 +7,7 @@ on:
 
 jobs:
   RunCompositeAction:
-    name: Runs a Composite Action
+    name: Runs a Composite Action to test input and output variables
     runs-on: ubuntu-latest
     
     steps:
@@ -17,7 +17,7 @@ jobs:
         id: myCompositeAction
         uses: marcusmai-telia/CompositeAction@main
         with:
-          input_var: MaiVar
+          input_var: MyInputValue
 
       - name: Print out the output value from Composite Action
         run: echo "The output is = ${{ steps.myCompositeAction.outputs.output_var }}"
