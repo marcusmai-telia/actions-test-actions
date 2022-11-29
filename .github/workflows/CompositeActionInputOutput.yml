@@ -14,9 +14,9 @@ jobs:
       - uses: actions/checkout@v3
       
       - name: Run a one-line script
-        run: echo Hello, world!
+        run: echo Lets start the work...
 
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+      - name: Now we run the Composite Action
+        uses: marcusmai-telia/CompositeAction@main
+        with:
+          input_var: MaiVar
