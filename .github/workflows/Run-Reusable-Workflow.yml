@@ -15,7 +15,7 @@ jobs:
 
       - name: Run the resusable workflow that will print the input_var
         id: myReusableWorkflow
-        uses: ./.github/workflows/Reusable-Workflow
+        uses: ./.github/workflows/Reusable-Workflow.yml
         with:
           input_var: MyInputValue
 
