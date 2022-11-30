@@ -8,5 +8,5 @@ on:
 jobs:
   call-Reusable-Workflow-in-local-repo:
     uses: ./.github/workflows/Reusable-Workflow.yml
-      #input_var: MyInputValue
-
+    with:
+      input_var: MyInputValue
