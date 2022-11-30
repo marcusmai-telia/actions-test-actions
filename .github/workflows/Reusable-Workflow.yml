@@ -1,3 +1,5 @@
+# This is a reusable workflow that handels input/output
+
 name: Reusable workflow
 on:
   workflow_call:

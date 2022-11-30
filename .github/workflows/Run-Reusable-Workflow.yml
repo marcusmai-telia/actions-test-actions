@@ -6,6 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
+  # Reusable workflows can only be called as a job
   call-Reusable-Workflow-in-local-repo:
     uses: ./.github/workflows/Reusable-Workflow.yml
     with:
