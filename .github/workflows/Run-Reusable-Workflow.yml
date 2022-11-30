@@ -10,3 +10,12 @@ jobs:
     uses: ./.github/workflows/Reusable-Workflow.yml
     with:
       input_var: MyInputValue
+  
+  Print-the-output:
+    name: Prints out the output value
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Print out the output value from reusable workflow
+        run: echo "The output is = ${{ steps.myCompositeAction.outputs.output_var }}"
+        shell: bash
