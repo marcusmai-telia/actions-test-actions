@@ -5,7 +5,12 @@ on:
       input_var:
         type: string 
         description: "This is the input variable"
+    outputs:
+      output_var:
+        description: "This is the output variable"
+        value: ${{ steps.set-output-var.outputs.value }}
   workflow_dispatch:
+
 jobs:
   PrintOutInputVariable:
     name: Runs a reusable Workflow to test input and output variables
