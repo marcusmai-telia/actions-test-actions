@@ -1,6 +1,6 @@
 # This workflow is usesd to test Composite Action using input/output
 
-name: Testing Composite Action Input and Output test 
+name: Run Composite Action 
 
 on:
   workflow_dispatch:
