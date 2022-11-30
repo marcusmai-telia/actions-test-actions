@@ -6,8 +6,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  RunReusableWorkflow:
-    uses: ./.github/workflows/eusable-Workflow.yml
-    with:
-      input_var: MyInputValue
+  call-Reusable-Workflow.yml-in-local-repo:
+    uses: ./.github/workflows/Reusable-Workflow.yml
+      #input_var: MyInputValue
 
