@@ -8,13 +8,15 @@ on:
     outputs:
       output_var:
         description: "This is the output variable"
-        value: ${{ steps.set-output-var.outputs.value }}
+        value: ${{ jobs.PrintOutInputVariable.outputs.output1 }}
   workflow_dispatch:
 
 jobs:
   PrintOutInputVariable:
     name: Runs a reusable Workflow to test input and output variables
     runs-on: ubuntu-latest
+    outputs:
+      Output1: ${{ steps.set-output-var.outputs.value }}
 
     steps:
     - uses: actions/checkout@v3
@@ -22,7 +24,6 @@ jobs:
     - name: Print out the input_var
       run: echo "The input is = ${{ inputs.input_var }}"
       shell: bash
-
 
     - name: Set output variable
       id: set-output-var
