@@ -7,9 +7,7 @@ on:
 
 jobs:
   RunReusableWorkflow:
-    uses: ./.github/workflows/Reusable-Workflow.yml
-      with:
+    uses: ./.github/workflows/eusable-Workflow.yml
+    with:
       input_var: MyInputValue
-
-
 
