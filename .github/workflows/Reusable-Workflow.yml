@@ -11,6 +11,8 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
+    - uses: actions/checkout@v3
+
     - name: Print out the input_var
       run: echo "The input is = ${{ inputs.input_var }}"
       shell: bash
