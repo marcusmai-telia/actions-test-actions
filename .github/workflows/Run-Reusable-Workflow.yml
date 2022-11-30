@@ -1,0 +1,24 @@
+# This workflow is usesd to test resusable workflow using input/output
+
+name: Testing reusable workflow Composite with Input and Output 
+
+on:
+  workflow_dispatch:
+
+jobs:
+  RunCompositeAction:
+    name: Runs a reusable workflow to test input and output variables
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run the resusable workflow that will print the input_var
+        id: myReusableWorkflow
+        uses: ./.github/workflows/Run-Reusable-Workflow.yml
+        with:
+          input_var: MyInputValue
+
+      #- name: Print out the output value from Composite Action
+      #  run: echo "The output is = ${{ steps.myCompositeAction.outputs.output_var }}"
+      #  shell: bash

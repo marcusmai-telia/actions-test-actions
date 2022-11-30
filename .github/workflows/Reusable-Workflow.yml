@@ -1,0 +1,16 @@
+name: Reusable workflow
+on:
+  workflow_call:
+    inputs:
+      input_var:
+        description: "This is the input variable"
+
+jobs:
+  PrintOutInputVariable:
+    name: Runs a reusable Workflow to test input and output variables
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Print out the input_var
+      run: echo "The input is = ${{ inputs.input_var }}"
+      shell: bash
