@@ -3,8 +3,9 @@ on:
   workflow_call:
     inputs:
       input_var:
+        type: string 
+        description: "This is the input variable"
   workflow_dispatch:
-
 jobs:
   PrintOutInputVariable:
     name: Runs a reusable Workflow to test input and output variables
