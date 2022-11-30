@@ -1,6 +1,6 @@
 # This workflow is usesd to test resusable workflow using input/output
 
-name: Testing reusable workflow Composite with Input and Output 
+name: Testing reusable workflow with Input and Output 
 
 on:
   workflow_dispatch:
