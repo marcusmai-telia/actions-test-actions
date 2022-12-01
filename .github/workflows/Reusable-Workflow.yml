@@ -1,6 +1,8 @@
 # This is a reusable workflow that handels input/output
 
 name: Reusable workflow
+run-name: Direct run of "Reusable workflow" by @${{ github.actor }} triggered on @${{ github.event_name }}
+
 on:
   workflow_call:
     inputs:

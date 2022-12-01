@@ -1,6 +1,7 @@
 # This workflow is usesd to test resusable workflow using input/output
 
 name: Run Reusable-Workflow 
+run-name: Run of "Reusable-Workflow" by @${{ github.actor }} triggered on @${{ github.event_name }}
 
 on:
   workflow_dispatch:
