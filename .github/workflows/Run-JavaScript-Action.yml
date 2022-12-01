@@ -1,0 +1,25 @@
+# This workflow is usesd to test a JavaScript Action using input/output
+
+name: Run JavaScript Action
+run-name: Run of "JavaScript Action" by @${{ github.actor }} triggered on @${{ github.event_name }}
+
+on:
+  workflow_dispatch:
+
+jobs:
+  RunJavaScriptAction:
+    name: Runs a JavaScript Action to test input and output variables
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run the JavaScript Action that will print the input_var
+        id: myJavaScriptAction
+        uses: marcusmai-telia/actions-javascript-action-basic@main
+        with:
+          who-to-greet: 'Telia'
+
+      - name: Print out the output value from JavaScript Action
+        run: echo "The output is = ${{ steps.myJavaScriptAction.outputs.time }}"
+        shell: bash
