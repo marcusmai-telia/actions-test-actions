@@ -18,7 +18,7 @@ jobs:
         id: myJavaScriptAction
         uses: marcusmai-telia/actions-javascript-action-basic@main
         with:
-          who-to-greet: 'Telia'
+          who-to-greet: 'Telia2'
           my-Secret: ${{ secrets.MY_TEST_SECRET }}
 
 
